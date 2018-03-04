@@ -456,6 +456,12 @@ src_libdrivers_la_SOURCES += \
 	src/hardware/pipistrello-ols/protocol.c \
 	src/hardware/pipistrello-ols/api.c
 endif
+if HW_REDPITAYA
+src_libdrivers_la_SOURCES += \
+	src/hardware/redpitaya/protocol.h \
+	src/hardware/redpitaya/protocol.c \
+	src/hardware/redpitaya/api.c
+endif
 if HW_RIGOL_DS
 src_libdrivers_la_SOURCES += \
 	src/hardware/rigol-ds/protocol.h \
@@ -902,4 +908,3 @@ dist-changelog:
 	else \
 		rm -f .ChangeLog.tmp; exit 1; \
 	fi
-
